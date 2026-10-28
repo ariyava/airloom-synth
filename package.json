@@ -1,0 +1,36 @@
+{
+  "name": "airloom-synth",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/build-worker.mjs",
+    "dev": "vite --host 127.0.0.1",
+    "prebuild": "node scripts/build-worker.mjs",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "typecheck": "tsc -b",
+    "check": "npm run test && npm run build",
+    "postinstall": "node scripts/copy-vision.mjs",
+    "setup:model": "node scripts/fetch-model.mjs",
+    "format": "prettier --write src tests scripts *.json *.ts *.html *.md",
+    "format:check": "prettier --check src tests scripts *.json *.ts *.html *.md"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "0.10.32",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.4",
+    "esbuild": "0.25.12",
+    "prettier": "3.6.2"
+  }
+}

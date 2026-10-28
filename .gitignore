@@ -1,0 +1,10 @@
+node_modules/
+.npm-cache/
+dist/
+*.tsbuildinfo
+playwright-report/
+test-results/
+public/vision/
+public/vision-worker.js
+.env*
+!.env.example

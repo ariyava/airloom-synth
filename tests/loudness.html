@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Airloom output level verification</title>
+    <style>
+      body {
+        font: 15px system-ui;
+        background: #101714;
+        color: #d9ebcb;
+        padding: 32px;
+        max-width: 950px;
+      }
+      button {
+        padding: 12px 20px;
+        background: #c8f58b;
+        border: 0;
+        border-radius: 6px;
+      }
+      pre {
+        white-space: pre-wrap;
+        line-height: 1.8;
+      }
+      p {
+        color: #a2b59a;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Airloom · output level verification</h1>
+    <p>
+      Offline rendering only. Compares identical synthesized chords through the previous and new
+      output stages. Nothing plays through speakers.
+    </p>
+    <button id="run">Measure loudness</button>
+    <pre id="results">Not started.</pre>
+    <script type="module" src="./loudness-smoke.ts"></script>
+  </body>
+</html>
